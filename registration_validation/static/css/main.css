@@ -1,0 +1,57 @@
+* {
+    margin: 0px !important;
+}
+
+.wrapper {
+    background-color: black;
+    height: 100vh;
+    max-width: 100%;
+    text-align: center;
+    padding: 40px;
+}
+.header {
+    color: #6590b5;
+}
+
+form {
+    background-color: #d9d9d9;
+    text-align: center;
+    width: 30%;
+    display: inline-block;
+    padding: 1%;
+}
+
+input {
+    width: 80%;
+}
+
+p {
+    line-height: 1rem;
+}
+.flash {
+    font-size: 13px;
+    color: red;
+}
+
+.state {
+    display: inline-block;
+    width: 39%;
+}
+
+.country {
+    display: inline-block;
+    width: 39%;
+    overflow: hidden; 
+    white-space:pre; 
+    text-overflow:ellipsis;
+    -webkit-appearance: none;
+}
+
+.block {
+    display: block;
+    border-radius: 5px;
+}
+
+.radius {
+    border-radius: 5px;
+}

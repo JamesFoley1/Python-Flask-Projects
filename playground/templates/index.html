@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+
+    <head>
+        <style>
+            * {
+                border: 0 none;
+                outline: 0;
+                padding: 0;
+                margin: 0;
+            }
+            .wrapper {
+                padding: 10px;
+                width: 90%;
+            }
+            h1 {
+                color: maroon;
+                text-align: center;
+            }
+            .main_content {
+                padding: 10px;
+                margin: auto;
+                text-align: center;
+            }
+            .box {
+                background-color: lightblue;
+                height: 150px;
+                width: 150px;
+                display: inline-block;
+                margin: 5px;
+                border: 2px solid black;
+            }
+        </style>
+
+        <head>
+
+            <body>
+                <div class="wrapper">
+                    <div class="main_content">
+                        <h1>{{ head }}</h1>
+                        {% for x in range(0, newNum): %}
+                        <div class="box" style="background-color: {{ newColor }}"></div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/myscript.js') }}"></script>
+</head>
+<body>
+
+    <form class="form1" action='/process' method='post'>
+        <h4>I am thinking of a number between 1 and 100!</h4>    
+        <h4>Take a guess!</h4>
+        <h4 style="color: red">{{ session['correct'] }}</h4>
+        <input type="text" name="guess">
+        <input type='submit' value='submit'>
+    </form>
+    <form action='/reset' method='post'>
+        <input type='submit' value='Reset'>
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+    <script src="{{ url_for('static', filename='js/myscript.js') }}"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <form action='result' method='post'>
+            Your Name: <input type="text" name ="name">
+            <p>Dojo Location:</p>
+            <select name='location'>
+                <option value='San Jose'>San Jose</option>
+                <option value='Seattle'>Seattle</option>
+                <option value='Chicago'>Chicago</option>
+                <option value='Dallas'>Dallas</option>
+            </select>
+            <p>Favorite Language:</p>
+            <select name="language">
+                <option value="Python">Python</option>
+                <option value='JavaScript'>JavaScript</option>
+                <option value='C#'>C#</option>
+                <option value='HTML/CSS'>HTML/CSS</option>
+            </select>
+            <p>Comment (optional):</p>
+            <textarea name="comment"></textarea>
+            <input type='submit' value='Submit'>
+            <input type='submit' value='Reset'>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    padding: 80px;
+}
+
+form {
+    text-align: center;
+    padding: 50px;
+    width: 300px;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+input {
+    width: 120px;
+    box-shadow: 1px 1px 1px black;
+}
+
+
+.total_wrap {
+    padding: 5px;
+}
+
+.total {
+    width: 150px;
+    height: 25px;
+    border: 1px solid black;
+    display: inline-block;
+    padding-top: 5px;
+    vertical-align: bottom;
+    font-size: 15px;
+    line-height: 12px;
+}
+
+.total_head {
+    width: 75px;
+    height: 25px;
+    display: inline-block;
+    padding-bottom: 5px;
+    vertical-align: top;
+}
+
+.activity {
+    overflow: auto;
+    width: 1210px;
+    height: 200px;
+    border: 1px solid black;
+}

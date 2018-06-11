@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+    <script src="{{ url_for('static', filename='js/myscript.js') }}"></script>
+</head>
+<body>
+    <form action='danger' method='POST'>
+        <h1>Submitted Info</h1>
+        <p>Name: {{ name }} </p>
+        <p>Dojo Location: {{ location }}</p>
+        <p>Favorite Language: {{ language }}</p>
+        <p>Comment: {{ comment }}</p>
+        <input type='submit'>
+    </form>
+</body>
+</html>

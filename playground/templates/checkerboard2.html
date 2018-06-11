@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Adaptive Checkerboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        .color1 {
+            background-color: blue;
+        }
+
+        .color2 {
+            background-color: red;
+        }
+
+        table tr td {
+            height: 50px;
+            width: 50px
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <table>
+    {% for i in range(num1): %}
+        <tr>
+            {% for j in range(num2): %}
+            <td class='color{{ (i+j)%2+1 }}'></td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+    </table>
+
+</body>
+
+</html>

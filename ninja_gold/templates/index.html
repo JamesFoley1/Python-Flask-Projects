@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/myscript.js') }}"></script>
+</head>
+<body>
+    <div class="total_wrap">
+        <p class="total_head">Your gold: </p>
+        <p class="total">{{ session['total'] }}</p>
+    </div>
+
+    <form action="/process_money" method="post">
+        <h3><b>Farm</b></h3>
+        <p>(earns 10-20 gold)</p>
+        <input type="hidden" name="building" value="farm"/>
+        <input type="submit" value="Find Gold!"/>
+    </form>
+      
+    <form action="/process_money" method="post">
+        <h3><b>Cave</b></h3>
+        <p>(earns 5-10 gold)</p>
+        <input type="hidden" name="building" value="cave"/>
+        <input type="submit" value="Find Gold!"/>
+    </form>
+
+    <form action="/process_money" method="post">
+        <h3><b>House</b></h3>
+        <p>(earns 2-5 gold)</p>
+        <input type="hidden" name="building" value="house"/>
+        <input type="submit" value="Find Gold!"/>
+    </form>
+
+    <form action="/process_money" method="post">
+        <h3><b>Casino</b></h3>
+        <p>(earns 0-50 gold)</p>
+        <input type="hidden" name="building" value="casino"/>
+        <input type="submit" value="Find Gold!"/>
+    </form>
+
+    <p>Activities: </p>
+    <div class ="activity">
+        {% for x in session['p'] %}
+            {{ x|safe }}
+        {% endfor %}
+    </div>
+    
+    <form action='/reset' method='post'>
+        <input type='submit' value='Reset'>
+    </form>
+    
+</body>
+</html>
